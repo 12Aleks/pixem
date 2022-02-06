@@ -1,7 +1,12 @@
-import {Container, Row, Col, Tabs, Tab} from 'react-bootstrap';
-import Link from "next/link";
+import {Tabs, Tab} from 'react-bootstrap';
 import Header from "../components/header";
 import Footer from "../components/footer";
+import First from "../components/subpages/first";
+import Second from "../components/subpages/second";
+import Third from "../components/subpages/third";
+import Fourth from "../components/subpages/fourth";
+import Fifth from "../components/subpages/fifth"
+
 
 const Home = () => {
     return (
@@ -10,22 +15,19 @@ const Home = () => {
             <div className='main'>
                         <Tabs defaultActiveKey="first" id="uncontrolled-tab-example" className="mb-2">
                             <Tab eventKey="first" title="Px to Rem">
-                                1
+                                <First/>
                             </Tab>
                             <Tab eventKey="second" title="Px to Em">
-                               2
+                               <Second/>
                             </Tab>
                             <Tab eventKey="third" title="Px to percentage" >
-                               3
+                               <Third/>
                             </Tab>
-                            <Tab eventKey="fourth" title="Rem to Em" >
-                                4
+                            <Tab eventKey="fourth" title="Rem to percentage" >
+                                <Fourth/>
                             </Tab>
-                            <Tab eventKey="fifth" title="Rem to percentage" >
-                                5
-                            </Tab>
-                            <Tab eventKey="sixth" title="Em to percentage" >
-                                6
+                            <Tab eventKey="fifth" title="Em to percentage" >
+                                <Fifth/>
                             </Tab>
                         </Tabs>
                  </div>

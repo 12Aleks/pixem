@@ -1,4 +1,5 @@
 import {Container, Navbar} from "react-bootstrap";
+import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/pixem.png";
 import React from "react";
@@ -8,7 +9,8 @@ const Header = () => {
         <>
         <Navbar >
             <Container fluid>
-                <Navbar.Brand href="">
+                <Link href="/">
+                <Navbar.Brand>
                     <Image
                         alt=""
                         src={logo}
@@ -17,6 +19,7 @@ const Header = () => {
                         height={30}
                     />
                 </Navbar.Brand>
+                </Link>
             </Container>
         </Navbar>
      </>
