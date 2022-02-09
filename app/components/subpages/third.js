@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Row, Col, FormControl, InputGroup} from 'react-bootstrap';
+import {Container, Row, Col, FormControl, InputGroup, Table} from 'react-bootstrap';
 import {ArrowLeftRight} from "react-bootstrap-icons";
 
 const Third = () => {
@@ -53,10 +53,13 @@ const Third = () => {
                     </div>
                         </Col>
                         <Col md={6} className={`text-wrapper ${position && 'order-1'}`}>
-                            <p><b>Pixel</b> unit (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens, 1px implies multiple device pixels.</p>
+                            <p><b>Pixel</b> unit (px). Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of a screen’s resolution).</p>
                         </Col>
                         <Col md={6} className={`text-wrapper ${!position && 'order-1'}`}>
-                            <p></p>
+                            <p><b>Percent</b> unit (%)</p>
+                        </Col>
+                        <Col md={12} className='order-2'>
+
                         </Col>
                     </Row>
                 </Col>
