@@ -37,16 +37,13 @@ const First = () => {
     return (
         <Container>
             <Row>
-                <Col md={3}>
-                    1
-                </Col>
                 <Col md={6}>
                     <Row>
                         <Col md={12} className='order-0'>
                     <div className={`input-wrapper ${position && "flex-row-reverse"}`}>
                         <div>
                             <p>Px</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <InputGroup className={`mb-3 ${!toggleSwitch && 'active'}`} size="lg">
                                 <FormControl
                                     type="text"
                                     value={px}
@@ -62,7 +59,7 @@ const First = () => {
 
                         <div>
                             <p>Rem</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <InputGroup className={`mb-3 ${toggleSwitch && 'active'}`} size="lg">
                                 <FormControl type="text"
                                              value={rem}
                                              onChange={(e) => setRem(e.target.value)}
@@ -73,10 +70,10 @@ const First = () => {
                     </div>
                         </Col>
                         <Col md={6} className={`text-wrapper ${position && 'order-1'}`}>
-                            <p><b>Pixel</b> unit (px). Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of a screen’s resolution).</p>
+                            <p><b>Pixel (px)</b>: Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). One problem with the pixel unit is that it does not scale upward for visually-impaired readers or downward to fit mobile devices.</p>
                         </Col>
                         <Col md={6} className={`text-wrapper ${!position && 'order-1'}`}>
-                            <p>The <b>Rem</b> unit is based upon the font-size value of the root element, which is the element. And if the element doesn’t have a specified font-size, the browser default value of 16px is used. So here only the value of the root is considered, and there is no relation with a parent element.</p>
+                            <p><b>Rems (rem)</b>: The 'rem' unit is based upon the font-size value of the root element, which is the element. And if the element doesn’t have a specified font-size, the browser default value of 16px is used. So here only the value of the root is considered, and there is no relation with a parent element.</p>
                         </Col>
                         <Col md={12} className='order-2 d-flex align-items-center'>
                              <UniversalTable  unitName={'rem'} data={tableFirst}/>
@@ -84,8 +81,8 @@ const First = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col md={3}>
-                    2
+                <Col md={6}>
+                    <h4>Preview</h4>
                 </Col>
             </Row>
         </Container>

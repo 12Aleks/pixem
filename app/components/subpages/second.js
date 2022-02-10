@@ -36,9 +36,6 @@ const Second = () => {
     return (
         <Container>
             <Row>
-                <Col md={3}>
-                    1
-                </Col>
                 <Col md={6}>
                     <Row>
                         <Col md={12} className='order-0'>
@@ -73,10 +70,10 @@ const Second = () => {
                     </div>
                         </Col>
                         <Col md={6} className={`text-wrapper ${position && 'order-1'}`}>
-                            <p><b>Pixel</b> unit (px). Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of a screen’s resolution).</p>
+                            <p><b>Pixel (px)</b>: Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). One problem with the pixel unit is that it does not scale upward for visually-impaired readers or downward to fit mobile devices.</p>
                         </Col>
                         <Col md={6} className={`text-wrapper ${!position && 'order-1'}`}>
-                            <p>The <b>Em</b> unit allows setting the font size of an element relative to the font size of its parent. When the size of the parent element changes, the size of the child changes automatically.</p>
+                            <p><b>Ems (em)</b>: The “em” is a scalable unit that is used in web document media. An em is equal to the current font-size, for instance, if the font-size of the document is 12pt, 1em is equal to 12pt. Ems are scalable in nature, so 2em would equal 24pt, .5em would equal 6pt, etc. Ems are becoming increasingly popular in web documents due to scalability and their mobile-device-friendly nature.</p>
                         </Col>
                         <Col md={12} className='order-2 d-flex align-items-center'>
                         <UniversalTable  unitName={'em'} data={tableFirst}/>
@@ -84,7 +81,7 @@ const Second = () => {
                          </Col>
                     </Row>
                 </Col>
-                <Col md={3}>
+                <Col md={6}>
                     2
                 </Col>
             </Row>

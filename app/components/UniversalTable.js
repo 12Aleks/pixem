@@ -2,12 +2,15 @@ import React from 'react';
 import {Table} from "react-bootstrap";
 
 const UniversalTable = ({ unitName, data}) => {
+
+    let unit = unitName !== '%'? unitName : 'percent';
+
     return (
         <Table striped bordered hover >
             <thead>
             <tr>
                 <th>Px</th>
-                <th>{unitName}</th>
+                <th>{unit}</th>
             </tr>
             </thead>
             <tbody>

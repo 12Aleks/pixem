@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, span, a{
   .tab-content{
     .container{
       & > .row{
-        & > div:nth-child(2){
+        & > div:nth-child(1){
           padding-top: 100px;
         }
         & > div{
@@ -67,6 +67,10 @@ h1, h2, h3, h4, h5, h6, p, span, a{
             }
             .input-group {
               max-width: 200px;
+              &.active{
+                border: 3px solid $dark-grey;
+                border-radius: 8px;
+              }
               &:focus, :focus-visible, :focus-within{
                 box-shadow: 0 0 0 0.25rem transparent;
                 border-color: #ced4da;
@@ -86,16 +90,20 @@ h1, h2, h3, h4, h5, h6, p, span, a{
           }
           .text-wrapper{
             p{
-              font: 400 1rem/1.25rem Lato, sans-serif;
-              letter-spacing: 1.2px;
+              font: 400 1rem/1.125rem Lato, sans-serif;
+              letter-spacing: 0.0625rem;
             }
           }
           table{
             margin-top: 15px;
             margin-bottom: 15px;
+            th, td{
+              font: 400 1rem/1.125rem Lato, sans-serif;
+            }
             th {
               text-align: center;
               text-transform: capitalize;
+              font-weight: 600;
             }
           }
         }

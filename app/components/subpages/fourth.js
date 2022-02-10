@@ -36,9 +36,6 @@ const Fourth = () => {
     return (
         <Container>
             <Row>
-                <Col md={3}>
-                    1
-                </Col>
                 <Col md={6}>
                     <Row>
                         <Col md={12} className='order-0'>
@@ -73,10 +70,10 @@ const Fourth = () => {
                             </div>
                         </Col>
                         <Col md={6} className={`text-wrapper ${position && 'order-1'}`}>
-                            <p><b>Pixel</b> unit (px). Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of a screen’s resolution). A pixel at 96DPI (dots per inch) is equal to 0.2645835 millimetres.</p>
+                            <p><b>Pixel (px)</b>: Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). One problem with the pixel unit is that it does not scale upward for visually-impaired readers or downward to fit mobile devices.</p>
                         </Col>
                         <Col md={6} className={`text-wrapper ${!position && 'order-1'}`}>
-                            <p><b>Points</b> unit (pt). Points are a unit of measurement used in print. They are based on an inch of a ruler, and one inch is equal to 72 points. Points are much like pixels, in that they are fixed-size units and cannot scale in size. A point is equal to 0.352778 millimetres or 1.333 pixels.</p>
+                            <p><b>Points (pt)</b>: Points are traditionally used in print media (anything that is to be printed on paper, etc.). One point is equal to 1/72 of an inch. Points are much like pixels, in that they are fixed-size units and cannot scale in size.</p>
                         </Col>
                         <Col md={12} className='order-2 d-flex align-items-center'>
                            <UniversalTable unitName={'pt'} data={tableFirst}/>
@@ -84,7 +81,7 @@ const Fourth = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col md={3}>
+                <Col md={6}>
                     2
                 </Col>
             </Row>
