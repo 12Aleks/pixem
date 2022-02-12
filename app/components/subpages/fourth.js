@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row, Col, InputGroup, FormControl, Table} from 'react-bootstrap';
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "../UniversalTable";
+import UniversalTable from "../universalTable";
+import Preview from "../preview";
 
 const Fourth = () => {
     const [pt, setPt] = useState(12);
@@ -37,12 +38,13 @@ const Fourth = () => {
         <Container>
             <Row>
                 <Col md={6}>
+                    <h2>Font size</h2>
                     <Row>
                         <Col md={12} className='order-0'>
                             <div className={`input-wrapper ${position && "flex-row-reverse"}`}>
                                 <div>
-                                    <p>Px</p>
-                                    <InputGroup className="mb-3" size="lg">
+                                    <h4>Px</h4>
+                                    <InputGroup size="lg">
                                         <FormControl
                                             type="text"
                                             value={px}
@@ -58,8 +60,8 @@ const Fourth = () => {
                                 </div>
 
                                 <div>
-                                    <p>Pt</p>
-                                    <InputGroup className="mb-3" size="lg">
+                                    <h4>Pt</h4>
+                                    <InputGroup size="lg">
                                         <FormControl type="text"
                                                      value={pt}
                                                      onChange={(e) => setPt(e.target.value)}
@@ -81,9 +83,7 @@ const Fourth = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col md={6}>
-                    2
-                </Col>
+                <Preview unit={px}/>
             </Row>
         </Container>
     );

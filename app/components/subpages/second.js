@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row, Col, Form, InputGroup, FormControl} from 'react-bootstrap';
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "../UniversalTable";
+import UniversalTable from "../universalTable";
+import Preview from "../preview";
 
 const Second = () => {
     const [em, setEm] = useState(1);
@@ -37,12 +38,13 @@ const Second = () => {
         <Container>
             <Row>
                 <Col md={6}>
+                    <h2>Font size</h2>
                     <Row>
                         <Col md={12} className='order-0'>
                     <div className={`input-wrapper ${position && "flex-row-reverse"}`}>
                         <div>
-                            <p>Px</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <h4>Px</h4>
+                            <InputGroup size="lg">
                                 <FormControl
                                     type="text"
                                     value={px}
@@ -58,8 +60,8 @@ const Second = () => {
                         </div>
 
                         <div>
-                            <p>Em</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <h4>Em</h4>
+                            <InputGroup size="lg">
                                 <FormControl type="text"
                                              value={em}
                                              onChange={(e) => setEm(e.target.value)}
@@ -81,9 +83,7 @@ const Second = () => {
                          </Col>
                     </Row>
                 </Col>
-                <Col md={6}>
-                    2
-                </Col>
+                <Preview unit={px}/>
             </Row>
         </Container>
     );

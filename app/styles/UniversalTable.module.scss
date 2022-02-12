@@ -1,0 +1,12 @@
+.table{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  th, td{
+    font: 400 1rem/1.125rem Lato, sans-serif;
+  }
+  th {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+}

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row, Col, FormControl, InputGroup, Table} from 'react-bootstrap';
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "../UniversalTable";
+import UniversalTable from "../universalTable";
+import Preview from "../preview";
 
 const Third = () => {
     const [percent, setPercent] = useState(100);
@@ -37,12 +38,13 @@ const Third = () => {
         <Container>
             <Row>
                 <Col md={6}>
+                    <h2>Font size</h2>
                     <Row>
                         <Col md={12} className='order-0'>
                     <div className={`input-wrapper ${position && "flex-row-reverse"}`}>
                         <div>
-                            <p>Px</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <h4>Px</h4>
+                            <InputGroup size="lg">
                                 <FormControl
                                     type="text"
                                     value={px}
@@ -58,8 +60,8 @@ const Third = () => {
                         </div>
 
                         <div>
-                            <p>Percent</p>
-                            <InputGroup className="mb-3" size="lg">
+                            <h4>Percent</h4>
+                            <InputGroup size="lg">
                                 <FormControl type="text"
                                              value={percent}
                                              onChange={(e) => setPercent(e.target.value)}
@@ -81,9 +83,7 @@ const Third = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col md={6}>
-                    2
-                </Col>
+                <Preview unit={px}/>
             </Row>
         </Container>
     );

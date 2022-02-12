@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Container, Row, Col, InputGroup, FormControl} from 'react-bootstrap';
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "../UniversalTable";
+import UniversalTable from "../universalTable";
+import Preview from "../preview";
 
 const First = () => {
     const [rem, setRem] = useState(1);
@@ -38,12 +39,13 @@ const First = () => {
         <Container>
             <Row>
                 <Col md={6}>
+                    <h2>Font size</h2>
                     <Row>
                         <Col md={12} className='order-0'>
                     <div className={`input-wrapper ${position && "flex-row-reverse"}`}>
                         <div>
-                            <p>Px</p>
-                            <InputGroup className={`mb-3 ${!toggleSwitch && 'active'}`} size="lg">
+                            <h4>Px</h4>
+                            <InputGroup size="lg">
                                 <FormControl
                                     type="text"
                                     value={px}
@@ -58,8 +60,8 @@ const First = () => {
                         </div>
 
                         <div>
-                            <p>Rem</p>
-                            <InputGroup className={`mb-3 ${toggleSwitch && 'active'}`} size="lg">
+                            <h4>Rem</h4>
+                            <InputGroup size="lg">
                                 <FormControl type="text"
                                              value={rem}
                                              onChange={(e) => setRem(e.target.value)}
@@ -81,9 +83,7 @@ const First = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col md={6}>
-                    <h4>Preview</h4>
-                </Col>
+                <Preview unit={px}/>
             </Row>
         </Container>
     );
