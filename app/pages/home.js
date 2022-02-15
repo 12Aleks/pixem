@@ -20,7 +20,7 @@ const Home = () => {
                             <Tab eventKey="second" title="Px to Em">
                                <Second/>
                             </Tab>
-                            <Tab eventKey="third" title="Px to percentage" >
+                            <Tab eventKey="third" title="Px to Percentage" >
                                <Third/>
                             </Tab>
                             <Tab eventKey="fourth" title="Rx to Pt" >

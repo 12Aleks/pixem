@@ -51,7 +51,7 @@ h6{
     }
   }
 
-  .input-group-lg, .input-group, .input-group-text, .form-select, button{
+  .input-group-lg, .input-group, .input-group-text, .form-select, button, .form-control{
     border-radius: 0;
     &:focus, :focus-visible, :focus-within{
       box-shadow: 0 0 0 0.25rem transparent;
@@ -83,10 +83,10 @@ h6{
     .container{
       & > .row{
         & > div:nth-child(1){
-          padding-top: 50px;
+          padding: 40px 15px;
         }
         & > div{
-          height: calc(100vh - 165px);
+          min-height: calc(100vh - 165px);
 
           .text-wrapper{
             p{

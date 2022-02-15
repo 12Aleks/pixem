@@ -10,6 +10,8 @@ const Preview = ({unit}) => {
     const [weight, setWeight] = useState(Number(500));
     const [variant, setVariant] = useState('normal');
     const [stretch, setStretch] = useState('normal');
+    const [active, setActive] = useState(false);
+
 
     const reset = () => {
         setText('Your text');
@@ -35,6 +37,20 @@ const Preview = ({unit}) => {
                 />
             </InputGroup>
             <div className={styles.text_wrapper}>
+                <button className={styles.buttonCode} onClick={() => setActive(!active)}>{!active? 'Show code': 'Hide code'}</button>
+                <div className={active && styles.codeWrapper}>
+                     <pre>{`
+                          p{
+                           font-size: ${unit};
+                           font-family: ${family};
+                           font-weight: ${weight};
+                           font-variant: ${variant};
+                           font-style: ${style};
+                           font-stretch: ${stretch};
+                           }
+                         `}
+                     </pre>
+                </div>
                 <p style={{
                     fontSize: `${unit <= 72 ? unit : 72}` + 'px',
                     color: `${color}`,
@@ -93,7 +109,7 @@ const Preview = ({unit}) => {
                     <Col md={6} className='mt-3'>
                          <Form.Label className={styles.label}>Font stretch</Form.Label>
                         <Form.Select onChange={e => setStretch(e.target.value)}>
-                            <option value="normal">normal</option>
+                            <option value="normal">Normal</option>
                             <option value="ultra-condensed">Ultra condensed</option>
                             <option value="extra-condensed">Extra condensed</option>
                             <option value="condensed">Condensed</option>
@@ -116,7 +132,7 @@ const Preview = ({unit}) => {
                         onChange={e => setColor(e.target.value)}
                     />
                 </Col>
-                <Col md={12} >
+                <Col md={12} className='d-flex justify-content-end'>
                     <Button variant="dark" onClick={reset} className={styles.darkBtn}>Reset preview</Button>
                 </Col>
                 </Row>
