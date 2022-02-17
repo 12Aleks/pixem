@@ -10,7 +10,9 @@ const Preview = ({unit}) => {
     const [weight, setWeight] = useState(Number(500));
     const [variant, setVariant] = useState('normal');
     const [stretch, setStretch] = useState('normal');
+    const [compress, setCompress] = useState(false);
     const [active, setActive] = useState(false);
+    const fontWeight = [500, 100, 200, 300, 400, 600, 700, 800, 900];
 
 
     const reset = () => {
@@ -38,18 +40,20 @@ const Preview = ({unit}) => {
             </InputGroup>
             <div className={styles.text_wrapper}>
                 <button className={styles.buttonCode} onClick={() => setActive(!active)}>{!active? 'Show code': 'Hide code'}</button>
+                {active && <button className={styles.buttonCompress} onClick={() => setCompress(!compress)}>{!compress? 'Compress code': 'Return'}</button>}
                 <div className={active && styles.codeWrapper}>
-                     <pre>{`
-                          p{
-                           font-size: ${unit};
-                           font-family: ${family};
-                           font-weight: ${weight};
-                           font-variant: ${variant};
-                           font-style: ${style};
-                           font-stretch: ${stretch};
-                           }
-                         `}
-                     </pre>
+                  <pre>{`
+                     p {
+                      ${!compress? ` font-size: ${unit <= 72 ? unit : 72}px;
+                       font-family: ${family};
+                       font-weight: ${weight}; 
+                       line-height: ${unit <= 72 ? unit : 72}px`:` font:${weight} ${unit <= 72 ? unit : 72}px/${unit <= 72 ? unit : 72}px ${family}`}
+                       font-variant: ${variant};
+                       font-style: ${style};
+                       font-stretch: ${stretch};
+                      }
+                     `}
+                  </pre>
                 </div>
                 <p style={{
                     fontSize: `${unit <= 72 ? unit : 72}` + 'px',
@@ -80,15 +84,11 @@ const Preview = ({unit}) => {
                     <Col md={6}>
                         <Form.Label className={styles.label}>Font weight</Form.Label>
                         <Form.Select onChange={e => setWeight(e.target.value)}>
-                            <option value="500">500</option>
-                            <option value="100">100</option>
-                            <option value="200">200</option>
-                            <option value="300">300</option>
-                            <option value="400">400</option>
-                            <option value="600">600</option>
-                            <option value="700">700</option>
-                            <option value="800">800</option>
-                            <option value="900">900</option>
+                            {
+                                fontWeight.map(weight =>
+                                    <option value={weight} key={weight}>{weight}</option>
+                                )
+                            }
                         </Form.Select>
                     </Col>
                 <Col md={6} className='mt-3'>
