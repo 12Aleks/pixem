@@ -83,7 +83,7 @@ const First = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Preview unit={px}/>
+                <Preview px={px} unit={rem} unitName={'rem'}/>
             </Row>
         </Container>
     );

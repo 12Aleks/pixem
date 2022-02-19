@@ -83,7 +83,7 @@ const Second = () => {
                          </Col>
                     </Row>
                 </Col>
-                <Preview unit={px}/>
+                <Preview px={px} unit={em} unitName={'em'}/>
             </Row>
         </Container>
     );

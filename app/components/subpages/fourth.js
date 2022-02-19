@@ -54,7 +54,6 @@ const Fourth = () => {
                                     </InputGroup>
                                 </div>
 
-
                                 <div onClick={() => setPosition(!position)}>
                                     <ArrowLeftRight  size={20}/>
                                 </div>
@@ -83,7 +82,7 @@ const Fourth = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Preview unit={px}/>
+                <Preview px={px} unit={pt} unitName={'pt'}/>
             </Row>
         </Container>
     );

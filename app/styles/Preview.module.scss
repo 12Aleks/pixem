@@ -19,11 +19,15 @@
   p{
     letter-spacing: 1px;
     font-family: 'Lato', sans-serif;
-    margin-bottom: 0;
     word-break: break-all;
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    margin: 0;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   & > div{
     display: none;

@@ -83,7 +83,7 @@ const Third = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Preview unit={px}/>
+                <Preview px={px} unit={percent} unitName={'%'}/>
             </Row>
         </Container>
     );

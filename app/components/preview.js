@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styles from '../styles/Preview.module.scss'
 import {Row, Col, FormControl, InputGroup, Form, Button} from "react-bootstrap";
 
-const Preview = ({unit}) => {
+const Preview = ({px, unit, unitName}) => {
     const [text, setText] = useState('Your text');
     const [color, setColor] = useState('#000000');
     const [style, setStyle] = useState('normal');
@@ -12,6 +12,7 @@ const Preview = ({unit}) => {
     const [stretch, setStretch] = useState('normal');
     const [compress, setCompress] = useState(false);
     const [active, setActive] = useState(false);
+    const [size, setSize] = useState(0);
     const fontWeight = [500, 100, 200, 300, 400, 600, 700, 800, 900];
 
 
@@ -25,17 +26,21 @@ const Preview = ({unit}) => {
         setStretch('normal');
     };
 
+    useEffect(() => {
+       px && setSize(px <= 72 ? px : 72)
+    }, [px]);
+
     return (
         <Col md={6} className={styles.preview}>
             <h2>Preview</h2>
-            <h6>Enter your text here (max length is 18 characters, max font-size 72px)</h6>
+            <h6>Enter your text here (max font-size respond 72px )</h6>
             <InputGroup>
                 <FormControl
                     type="text"
                     placeholder=''
                     value={text}
                     onChange={e => setText(e.target.value)}
-                    maxLength="18"
+                    maxLength="180"
                 />
             </InputGroup>
             <div className={styles.text_wrapper}>
@@ -44,10 +49,10 @@ const Preview = ({unit}) => {
                 <div className={active && styles.codeWrapper}>
                   <pre>{`
                      p {
-                      ${!compress? ` font-size: ${unit <= 72 ? unit : 72}px;
+                      ${!compress? ` font-size: ${unit}${unitName};
                        font-family: ${family};
-                       font-weight: ${weight}; 
-                       line-height: ${unit <= 72 ? unit : 72}px`:` font:${weight} ${unit <= 72 ? unit : 72}px/${unit <= 72 ? unit : 72}px ${family}`}
+                       font-weight: ${weight};
+                       line-height: ${unit}${unitName};`:` font:${weight} ${unit}${unitName}/${unit}${unitName} ${family}`}
                        font-variant: ${variant};
                        font-style: ${style};
                        font-stretch: ${stretch};
@@ -56,13 +61,14 @@ const Preview = ({unit}) => {
                   </pre>
                 </div>
                 <p style={{
-                    fontSize: `${unit <= 72 ? unit : 72}` + 'px',
+                    fontSize: `${size}` + 'px',
+                    lineHeight: `${size}` + 'px',
                     color: `${color}`,
                     fontStyle: `${style}`,
                     fontFamily: `${family}`,
                     fontWeight: `${weight}`,
                     fontVariant: `${variant}`,
-                    fontStretch: `${stretch}`
+                    fontStretch: `${stretch}`,
                 }}
                 >{text}</p>
             </div>
@@ -107,7 +113,7 @@ const Preview = ({unit}) => {
                         </Form.Select>
                     </Col>
                     <Col md={6} className='mt-3'>
-                         <Form.Label className={styles.label}>Font stretch</Form.Label>
+                        <Form.Label className={styles.label}>Font stretch</Form.Label>
                         <Form.Select onChange={e => setStretch(e.target.value)}>
                             <option value="normal">Normal</option>
                             <option value="ultra-condensed">Ultra condensed</option>
@@ -127,7 +133,8 @@ const Preview = ({unit}) => {
                         type="color"
                         id="exampleColorInput"
                         className={styles.formColor}
-                        defaultValue="#00000"
+                        defaultValue={color}
+                        value={color}
                         title="Choose your color"
                         onChange={e => setColor(e.target.value)}
                     />

@@ -23,10 +23,10 @@ const Home = () => {
                             <Tab eventKey="third" title="Px to Percentage" >
                                <Third/>
                             </Tab>
-                            <Tab eventKey="fourth" title="Rx to Pt" >
+                            <Tab eventKey="fourth" title="Px to Pt" >
                                 <Fourth/>
                             </Tab>
-                            <Tab eventKey="fifth" title="Em to percentage" >
+                            <Tab eventKey="fifth" title="Px to Centimeter" >
                                 <Fifth/>
                             </Tab>
                         </Tabs>
