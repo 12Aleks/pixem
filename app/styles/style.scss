@@ -14,6 +14,7 @@ h2{
 h4{
   text-align: center;
   display: block;
+  text-transform: capitalize;
   font: 600 1.25rem/1.25rem 'Lato', sans-serif;
 }
 
@@ -66,6 +67,10 @@ h6{
     padding-bottom: 40px;
     .input-group {
       max-width: 200px;
+      &.active{
+        border: 2px solid #000;
+
+      }
       .form-control{
         border-right: 1px solid $white;
       }
@@ -92,6 +97,9 @@ h6{
             p{
               font: 400 1rem/1.25rem Lato, sans-serif;
               letter-spacing: 0.0625rem;
+              b{
+                text-transform: capitalize;
+              }
             }
           }
 

@@ -1,26 +1,30 @@
-import React from 'react';
+import {useState} from 'react';
 import {Table} from "react-bootstrap";
 import styles from '../styles/UniversalTable.module.scss'
 
-const UniversalTable = ({ unitName, data}) => {
+const UniversalTable = ({unitData, tableContent, updatePx}) => {
+    const [active, setActive] = useState(0);
 
-    let unit = unitName !== '%'? unitName : 'percent';
+   function updateData(data, index){
+        updatePx(data);
+        setActive(index)
+    }
 
     return (
         <Table striped bordered hover className={styles.table} >
             <thead>
             <tr>
                 <th>Px</th>
-                <th>{unit}</th>
+                <th>{unitData && unitData.name}</th>
             </tr>
             </thead>
             <tbody>
             {
-                data.map(el => {
+                tableContent.map((el, index) => {
                     return(
-                        <tr key={el.px}>
+                        <tr key={el.px} onClick={() => updateData(el.px, index)} className={active === index? 'active': undefined}>
                             <td>{el.px}px</td>
-                            <td>{el.unit}{unitName}</td>
+                            <td>{el.unit}{unitData && unitData.code}</td>
                         </tr>
                     )
                 })
