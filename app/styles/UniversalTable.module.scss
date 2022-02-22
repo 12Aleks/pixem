@@ -1,17 +1,16 @@
 .table{
   margin-top: 30px;
   margin-bottom: 15px;
-  th, td{
-    font: 400 1rem/1.125rem Lato, sans-serif;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-  th {
-    text-align: center;
-    text-transform: capitalize;
-    font-weight: 600;
-  }
-  tr.active{
-    border: 1px solid  darkred;
+  tr{
+    th, td{
+      font: 400 1rem/1.125rem Lato, sans-serif;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    th {
+      text-align: center;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
   }
 }

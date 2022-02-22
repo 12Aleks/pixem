@@ -64,7 +64,8 @@ const FontSize = ({ px, setPx,  unit, setUnit, unitsInfo, active, setActive, tog
                     <UniversalTable
                         unitData={unitsInfo.unitData}
                         tableContent={unitsInfo.second}
-                        updatePx={data => [setToggleSwitch(true), setPx(data)]}/>
+                        updatePx={data => [setToggleSwitch(true), setPx(data)]}
+                    />
                 </Col>
             </Row>
         </Col>

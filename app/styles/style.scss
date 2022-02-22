@@ -19,14 +19,14 @@ h4{
 }
 
 h6{
-  font: 600 1rem/1.125rem 'Lato', sans-serif;
+  font: 600 1rem/1.4rem 'Lato', sans-serif;
 }
-
 .navbar{
   background: $white;
   border-bottom: 1px solid $black;
   .navbar-brand{
     height: 40px;
+    cursor: pointer;
   }
 }
 .main{
@@ -40,6 +40,7 @@ h6{
       font-weight: 400;
       padding-left: 30px;
       padding-right: 30px;
+      letter-spacing: 1.2px;
       &.active{
         background-color: transparent;
         border-color: transparent;
@@ -59,14 +60,16 @@ h6{
       border-color: #ced4da;
     }
   }
-
+  svg{
+    margin-top: 28px;
+  }
   .input-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-bottom: 40px;
     .input-group {
-      max-width: 200px;
+      max-width: 260px;
       &.active{
         border: 2px solid #000;
 
@@ -78,6 +81,7 @@ h6{
         background: #fff;
         border-left: 1px solid $white;
         font-weight: 600;
+        padding:  0.5rem 1rem 0.5rem 0.5rem;
       }
     }
     & > div:nth-child(2){
@@ -123,6 +127,20 @@ footer{
     margin: 10px auto;
     a{
       padding: 10px;
+    }
+  }
+}
+.about, .contact{
+  .row{
+    & > div{
+      min-height: calc(100vh - 103px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1{
+        margin-bottom: 40px;
+      }
     }
   }
 }

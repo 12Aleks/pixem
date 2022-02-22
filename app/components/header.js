@@ -1,4 +1,4 @@
-import {Container, Navbar} from "react-bootstrap";
+import {Container, Navbar, Form} from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/pixem.png";
@@ -20,6 +20,13 @@ const Header = () => {
                     />
                 </Navbar.Brand>
                 </Link>
+
+                <Form.Check
+                    type="switch"
+                    id="custom-switch"
+                    label="Color theme"
+                />
+
             </Container>
         </Navbar>
      </>

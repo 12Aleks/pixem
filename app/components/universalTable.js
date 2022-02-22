@@ -22,7 +22,7 @@ const UniversalTable = ({unitData, tableContent, updatePx}) => {
             {
                 tableContent.map((el, index) => {
                     return(
-                        <tr key={el.px} onClick={() => updateData(el.px, index)} className={active === index? 'active': undefined}>
+                        <tr key={el.px} onClick={() => updateData(el.px, index)} className={active === index ? styles.active: undefined}>
                             <td>{el.px}px</td>
                             <td>{el.unit}{unitData && unitData.code}</td>
                         </tr>

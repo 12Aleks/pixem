@@ -1,0 +1,16 @@
+.socialMedia{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > div{
+    margin: 15px 30px;
+    opacity: .9;
+    cursor: pointer;
+    transition: .5s;
+    &:hover{
+      opacity: .7;
+      transition: .5s;
+    }
+  }
+}
