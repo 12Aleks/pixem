@@ -2,18 +2,18 @@ import {Container, Navbar, Form} from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/pixem.png";
-import React from "react";
+import logo_dark from "../images/pixem_dark.png";
 
-const Header = () => {
+const Header = ({theme, setTheme}) => {
+
     return (
-        <>
         <Navbar >
             <Container fluid>
                 <Link href="/">
                 <Navbar.Brand>
                     <Image
                         alt=""
-                        src={logo}
+                        src={theme? logo: logo_dark}
                         className="d-inline-block align-top logo"
                         width={120}
                         height={30}
@@ -24,13 +24,12 @@ const Header = () => {
                 <Form.Check
                     type="switch"
                     id="custom-switch"
-                    label="Color theme"
+                    label='Color theme'
+                    onChange={() => setTheme(!theme)}
                 />
 
             </Container>
         </Navbar>
-     </>
-
     );
 };
 

@@ -3,7 +3,7 @@
 h1, h2, h3, h4, h5, h6, p, span, a{
   text-decoration: none;
   font-family: 'Lato', sans-serif;
-  color: $black;
+
 }
 h2{
   text-align: center;
@@ -21,14 +21,43 @@ h4{
 h6{
   font: 600 1rem/1.4rem 'Lato', sans-serif;
 }
+
+.dark{
+  background: $dark;
+
+  h1, h2, h3, h4, h5, h6, p, span, a, .nav-link, label, table tr th, td{
+    color: $white !important;
+  }
+  .navbar, .main .nav.nav-tabs, .main, button,  .table > :not(:first-child){
+    border-color:  $white;
+  }
+}
+
+.form-check-input, .input-group-lg, .input-group, .input-group-text, .form-select, button, .form-control{
+  &:focus, :focus-visible, :focus-within{
+    box-shadow: 0 0 0 0.25rem transparent !important;
+    border-color: #ced4da ;
+  }
+}
 .navbar{
-  background: $white;
   border-bottom: 1px solid $black;
   .navbar-brand{
     height: 40px;
     cursor: pointer;
   }
+  .form-check{
+    padding: 0 40px;
+    .form-check-input{
+      width: 3em;
+      height: 1.5rem;
+      border-color: $black;
+      &:checked {
+        background-color: $black;
+      }
+    }
+  }
 }
+
 .main{
   min-height: calc(100vh - 103px);
   .nav.nav-tabs{
@@ -55,14 +84,12 @@ h6{
 
   .input-group-lg, .input-group, .input-group-text, .form-select, button, .form-control{
     border-radius: 0;
-    &:focus, :focus-visible, :focus-within{
-      box-shadow: 0 0 0 0.25rem transparent;
-      border-color: #ced4da;
-    }
   }
+
   svg{
     margin-top: 28px;
   }
+
   .input-wrapper{
     display: flex;
     align-items: center;
@@ -124,7 +151,8 @@ footer{
   div{
     width: max-content;
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 10px;
     a{
       padding: 10px;
     }

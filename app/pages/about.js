@@ -1,11 +1,10 @@
-import Header from "../components/header";
 import {Container, Row, Col} from "react-bootstrap";
-import Footer from "../components/footer";
+import MainContainer from "../components/MainContainer";
 
 const About = () => {
     return (
+        <MainContainer title={'About project'} keywords={'About project'}>
         <div className='about'>
-            <Header/>
             <Container className='main'>
                 <Row>
                     <Col  sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
@@ -20,8 +19,8 @@ const About = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer/>
         </div>
+        </MainContainer>
     );
 };
 

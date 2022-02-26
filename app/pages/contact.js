@@ -1,7 +1,5 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Link from "next/link";
 import Image from 'next/image';
 import styles from '../styles/Contact.module.scss';
@@ -9,11 +7,12 @@ import skype from '../images/skype.png'
 import facebook from '../images/facebook .png';
 import linkedin from '../images/linkedin.png';
 import email from '../images/email.png';
+import MainContainer from "../components/MainContainer";
 
 const Contact = () => {
     return (
+        <MainContainer  title={'Contact page'} keywords={'Contact page'}>
         <div className='contact'>
-            <Header/>
             <Container className='main'>
                 <Row>
                     <Col sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
@@ -42,8 +41,8 @@ const Contact = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer/>
         </div>
+        </MainContainer>
     );
 };
 
