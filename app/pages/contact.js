@@ -12,8 +12,7 @@ import MainContainer from "../components/MainContainer";
 const Contact = () => {
     return (
         <MainContainer  title={'Contact page'} keywords={'Contact page'}>
-        <div className='contact'>
-            <Container className='main'>
+            <Container className='main contact'>
                 <Row>
                     <Col sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
                         <h1>Contact</h1>
@@ -41,7 +40,6 @@ const Contact = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
         </MainContainer>
     );
 };

@@ -4,8 +4,7 @@ import MainContainer from "../components/MainContainer";
 const About = () => {
     return (
         <MainContainer title={'About project'} keywords={'About project'}>
-        <div className='about'>
-            <Container className='main'>
+            <Container className='main about'>
                 <Row>
                     <Col  sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
                         <h1>About project</h1>
@@ -19,7 +18,6 @@ const About = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
         </MainContainer>
     );
 };

@@ -1,18 +1,18 @@
 import Header from "./header";
 import Footer from "./footer";
 import Head from "next/head";
-import {useState} from "react";
+import {useSelector} from 'react-redux';
 
 const MainContainer = ({children, title, keywords}) => {
-    const [theme, setTheme] = useState(true);
+    const selector = useSelector(state => state.colorTheme.value);
 
     return (
-        <section className={theme ? undefined: 'dark'}>
+        <section className={selector.payload ? undefined: 'dark'}>
             <Head>
                 <title>{title}</title>
                 <meta keywords={'pixem converter' + keywords}></meta>
             </Head>
-            <Header theme={theme} setTheme={data => setTheme(data)}/>
+            <Header />
             {children}
             <Footer/>
         </section>

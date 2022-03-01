@@ -3,9 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/pixem.png";
 import logo_dark from "../images/pixem_dark.png";
+import {useSelector, useDispatch} from "react-redux";
+import {toggleTheme} from '../store/themeSlice'
 
-const Header = ({theme, setTheme}) => {
-
+const Header = () => {
+    const selector = useSelector(state => state.colorTheme.value);
+    const dispatch = useDispatch();
+    console.log(selector.payload)
     return (
         <Navbar >
             <Container fluid>
@@ -13,7 +17,7 @@ const Header = ({theme, setTheme}) => {
                 <Navbar.Brand>
                     <Image
                         alt=""
-                        src={theme? logo: logo_dark}
+                        src={selector.payload? logo: logo_dark}
                         className="d-inline-block align-top logo"
                         width={120}
                         height={30}
@@ -25,7 +29,7 @@ const Header = ({theme, setTheme}) => {
                     type="switch"
                     id="custom-switch"
                     label='Color theme'
-                    onChange={() => setTheme(!theme)}
+                    onChange={() => dispatch(toggleTheme(!selector.payload))}
                 />
 
             </Container>

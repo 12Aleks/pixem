@@ -1,15 +1,8 @@
-import {makeAutoObservable} from 'mobx-react-lite'
+import {configureStore} from '@reduxjs/toolkit'
+import themeSlice from "./themeSlice";
 
-export default class State{
-    constructor(){
-        this._theme = true;
-        makeAutoObservable(this)
+export default configureStore({
+    reducer:{
+        colorTheme: themeSlice
     }
-    setTheme(theme){
-        this._theme = theme
-    }
-
-    get theme(){
-        return this._theme
-    }
-}
+})

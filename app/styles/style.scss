@@ -25,11 +25,14 @@ h6{
 .dark{
   background: $dark;
 
-  h1, h2, h3, h4, h5, h6, p, span, a, .nav-link, label, table tr th, td{
+  h1, h2, h3, h4, h5, h6, p, span, a, .nav-link, label, table tr th, td, svg{
     color: $white !important;
   }
   .navbar, .main .nav.nav-tabs, .main, button,  .table > :not(:first-child){
-    border-color:  $white;
+    border-color: $white;
+  }
+  .input-wrapper .input-group.active{
+    border:1px solid $grey;
   }
 }
 
@@ -47,10 +50,13 @@ h6{
   }
   .form-check{
     padding: 0 40px;
+    display: flex;
+    align-items: center;
     .form-check-input{
       width: 3em;
       height: 1.5rem;
       border-color: $black;
+      margin-right: 16px;
       &:checked {
         background-color: $black;
       }
@@ -115,6 +121,7 @@ h6{
       cursor: pointer;
     }
   }
+
   .tab-content{
     .container{
       & > .row{
