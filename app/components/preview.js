@@ -1,10 +1,12 @@
 import {useEffect, useState} from 'react';
 import styles from '../styles/Preview.module.scss'
 import {Row, Col, FormControl, InputGroup, Form, Button} from "react-bootstrap";
+import {useSelector} from 'react-redux'
 
 const Preview = ({px, unit, unitName, setPx}) => {
+    const selector = useSelector(state => state.colorTheme.value);
     const [text, setText] = useState('Your text');
-    const [color, setColor] = useState('#000000');
+    const [color, setColor] = useState('#fff');
     const [style, setStyle] = useState('normal');
     const [family, setFamily] = useState("'Lato', sans-serif");
     const [weight, setWeight] = useState(Number(500));
@@ -17,13 +19,17 @@ const Preview = ({px, unit, unitName, setPx}) => {
 
     function reset(){
         setText('Your text');
-        setColor('#000000');
+        setColor(selector.payload? '#000': '#fff');
         setStyle('normal');
         setFamily("'Lato', sans-serif");
         setWeight(500);
         setVariant('normal');
         setStretch('normal');
     };
+
+    useEffect(() => {
+      setColor(selector.payload? '#000': '#fff')
+    }, [selector.payload]);
 
     useEffect(() => {
        px && setSize(px);
@@ -60,7 +66,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
                      `}
                   </pre>
                 </div>
-                <p style={{
+                <p className='text' style={{
                     fontSize: `${size}` + 'px',
                     lineHeight: `${size}` + 'px',
                     color: `${color}`,
@@ -135,7 +141,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
                         className={styles.formColor}
                         value={color}
                         title="Choose your color"
-                        onChange={e => setColor(e.target.value)}
+                        onChange={e =>  setColor(e.target.value)}
                     />
                 </Col>
                 <Col md={12} className='d-flex justify-content-end'>

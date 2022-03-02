@@ -7,7 +7,6 @@ export const createTheme = createSlice({
     },
     reducers: {
       toggleTheme: (state, payload) => {
-          console.log('clickp', payload)
           state.value = payload
       }
     }

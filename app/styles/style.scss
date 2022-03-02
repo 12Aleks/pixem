@@ -25,7 +25,7 @@ h6{
 .dark{
   background: $dark;
 
-  h1, h2, h3, h4, h5, h6, p, span, a, .nav-link, label, table tr th, td, svg{
+  h1, h2, h3, h4, h5, h6, p:not(p.text), span, a, .nav-link, label, table tr th, td, svg{
     color: $white !important;
   }
   .navbar, .main .nav.nav-tabs, .main, button,  .table > :not(:first-child){
@@ -42,6 +42,7 @@ h6{
     border-color: #ced4da ;
   }
 }
+
 .navbar{
   border-bottom: 1px solid $black;
   .navbar-brand{

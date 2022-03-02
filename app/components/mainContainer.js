@@ -10,6 +10,7 @@ const MainContainer = ({children, title, keywords}) => {
         <section className={selector.payload ? undefined: 'dark'}>
             <Head>
                 <title>{title}</title>
+                <link rel="shortcut icon" href="/favicon.ico" />
                 <meta keywords={'pixem converter' + keywords}></meta>
             </Head>
             <Header />
