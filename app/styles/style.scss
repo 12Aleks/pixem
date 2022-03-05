@@ -71,6 +71,9 @@ h6{
 
 .main{
   min-height: calc(100vh - 103px);
+  @media(max-width: 991.98px){
+    min-height: auto;
+  }
   .nav.nav-tabs{
     align-items: center;
     justify-content: center;
