@@ -19,7 +19,7 @@ const MainContainer = ({children, title, keywords}) => {
                 <meta keywords={'pixem converter' + keywords}></meta>
             </Head>
             <Header />
-            {children}
+               {children}
             <Footer/>
         </section>
     );

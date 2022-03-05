@@ -1,5 +1,4 @@
 import {Tabs, Tab} from 'react-bootstrap';
-
 import First from "../components/subpages/first";
 import Second from "../components/subpages/second";
 import Third from "../components/subpages/third";

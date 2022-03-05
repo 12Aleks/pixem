@@ -3,7 +3,6 @@
 h1, h2, h3, h4, h5, h6, p, span, a{
   text-decoration: none;
   font-family: 'Lato', sans-serif;
-
 }
 h2{
   text-align: center;
@@ -145,9 +144,9 @@ h6{
         }
       }
     }
-
   }
 }
+
 footer{
   border-top: 1px solid $light-grey;
   a{
@@ -166,7 +165,7 @@ footer{
     }
   }
 }
-.about, .contact{
+.about, .contact, .error{
   .row{
     & > div{
       min-height: calc(100vh - 103px);
