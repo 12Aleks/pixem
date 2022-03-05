@@ -1,6 +1,6 @@
 import {Col, FormControl, InputGroup, Row} from "react-bootstrap";
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "./universalTable";
+import UniversalTable from "./UniversalTable";
 import {useState} from "react";
 
 const FontSize = ({ px, setPx,  unit, setUnit, unitsInfo, active, setActive, toggleSwitch,  setToggleSwitch}) => {

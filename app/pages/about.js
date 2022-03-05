@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import MainContainer from "../components/MainContainer";
 

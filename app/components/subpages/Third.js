@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Container, Row} from 'react-bootstrap';
-import Preview from "../preview";
-import FontSize from "../fontSize";
+import Preview from "../Preview";
+import FontSize from "../FontSize";
 
 const Third = () => {
     const [percent, setPercent] = useState(100);

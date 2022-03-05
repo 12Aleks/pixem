@@ -1,4 +1,4 @@
-import MainContainer from "../components/mainContainer";
+import MainContainer from "../components/MainContainer";
 import {Container, Row, Col} from "react-bootstrap";
 import Link from "next/link";
 

@@ -1,9 +1,9 @@
 import {Tabs, Tab} from 'react-bootstrap';
-import First from "../components/subpages/first";
-import Second from "../components/subpages/second";
-import Third from "../components/subpages/third";
-import Fourth from "../components/subpages/fourth";
-import Fifth from "../components/subpages/fifth";
+import First from "../components/subpages/First";
+import Second from "../components/subpages/Second";
+import Third from "../components/subpages/Third";
+import Fourth from "../components/subpages/Fourth";
+import Fifth from "../components/subpages/Fifth";
 
 const Home = () => {
     return (

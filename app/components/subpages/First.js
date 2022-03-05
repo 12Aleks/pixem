@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Container, Row} from 'react-bootstrap';
-import Preview from "../preview";
-import FontSize from "../fontSize";
+import Preview from "../Preview";
+import FontSize from "../FontSize";
 
 const First = () => {
     const [rem, setRem] = useState(1);

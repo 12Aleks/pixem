@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Row, Col, InputGroup, FormControl, Table} from 'react-bootstrap';
-import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "../universalTable";
-import Preview from "../preview";
-import FontSize from "../fontSize";
+import {Container, Row} from 'react-bootstrap';
+import Preview from "../Preview";
+import FontSize from "../FontSize";
 
 const Fourth = () => {
     const [pt, setPt] = useState(12);

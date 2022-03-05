@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Col, FormControl, InputGroup, Row} from "react-bootstrap";
 import {ArrowLeftRight} from "react-bootstrap-icons";
-import UniversalTable from "./universalTable";
+import UniversalTable from "./UniversalTable";
 
 const Converter = () => {
     const [unit , setUnit] = useState(0)

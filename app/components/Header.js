@@ -9,7 +9,7 @@ import {toggleTheme} from '../store/themeSlice'
 const Header = () => {
     const selector = useSelector(state => state.colorTheme.value);
     const dispatch = useDispatch();
-    console.log(selector.payload)
+
     return (
         <Navbar >
             <Container fluid>

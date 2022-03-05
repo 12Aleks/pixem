@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row} from 'react-bootstrap';
-import FontSize from "../fontSize";
-import Preview from "../preview";
+import Preview from "../Preview";
+import FontSize from "../FontSize";
 
 const Fifth = () => {
 

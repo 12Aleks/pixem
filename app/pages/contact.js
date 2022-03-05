@@ -2,12 +2,12 @@ import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import Link from "next/link";
 import Image from 'next/image';
-import styles from '../styles/Contact.module.scss';
 import skype from '../images/skype.png'
 import facebook from '../images/facebook .png';
 import linkedin from '../images/linkedin.png';
 import email from '../images/email.png';
 import MainContainer from "../components/MainContainer";
+import styles from '../styles/Contact.module.scss';
 
 const Contact = () => {
     return (
