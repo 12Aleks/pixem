@@ -3,6 +3,10 @@
 h1, h2, h3, h4, h5, h6, p, span, a{
   text-decoration: none;
   font-family: 'Lato', sans-serif;
+  color: $dark;
+}
+h1, h2, h3, h4, h5, h6, label{
+  letter-spacing: 1px;
 }
 h2{
   text-align: center;
@@ -24,7 +28,7 @@ h6{
 .dark{
   background: $dark;
 
-  h1, h2, h3, h4, h5, h6, p:not(p.text), span, a, .nav-link, label, table tr th, td, svg{
+  h1, h2, h3, h4, h5, h6, p:not(p.text), span:not(span.input-group-text), a, .nav-link, label, table tr th, td, svg{
     color: $white !important;
   }
   .navbar, .main .nav.nav-tabs, .main, button,  .table > :not(:first-child){
@@ -33,6 +37,7 @@ h6{
   .input-wrapper .input-group.active{
     border:1px solid $grey;
   }
+
 }
 
 .form-check-input, .input-group-lg, .input-group, .input-group-text, .form-select, button, .form-control{
@@ -76,6 +81,10 @@ h6{
       padding-left: 30px;
       padding-right: 30px;
       letter-spacing: 1.2px;
+      @media(max-width: 567.98px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       &.active{
         background-color: transparent;
         border-color: transparent;
@@ -93,19 +102,15 @@ h6{
   }
 
   svg{
-    margin-top: 28px;
-  }
+    margin: 28px 10px 0 10px;
 
-  .input-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: 40px;
+  }
+  .FontSize_inputWrapper__oqEsi{
     .input-group {
       max-width: 260px;
+
       &.active{
         border: 2px solid #000;
-
       }
       .form-control{
         border-right: 1px solid $white;
@@ -117,34 +122,28 @@ h6{
         padding:  0.5rem 1rem 0.5rem 0.5rem;
       }
     }
-    & > div:nth-child(2){
-      cursor: pointer;
-    }
   }
+
 
   .tab-content{
     .container{
       & > .row{
         & > div:nth-child(1){
-          padding: 40px 15px;
+          padding: 50px 15px;
+          @media(max-width: 567.98px){
+            padding: 30px 15px 0 ;
+          }
         }
         & > div{
           min-height: calc(100vh - 165px);
-
-          .text-wrapper{
-            p{
-              font: 400 1rem/1.25rem Lato, sans-serif;
-              letter-spacing: 0.0625rem;
-              b{
-                text-transform: capitalize;
-              }
-            }
+          @media(max-width: 991.98px){
+            min-height: auto;
           }
-
         }
       }
     }
   }
+
 }
 
 footer{
@@ -176,6 +175,28 @@ footer{
       h1{
         margin-bottom: 40px;
       }
+    }
+  }
+}
+
+.error{
+  h1{
+    font: 400 5rem/5rem Lato, sans-serif;
+  }
+  p{
+    font: 400 1.125rem/2rem Lato, sans-serif;
+    text-align: center;
+  }
+  u{
+    cursor: pointer;
+  }
+  @media(max-width: 567.98px){
+    h1{
+      font: 400 3rem/3rem Lato, sans-serif;
+    }
+    p{
+      font: 400 1rem/2rem Lato, sans-serif;
+      text-align: center;
     }
   }
 }

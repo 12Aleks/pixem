@@ -3,7 +3,7 @@
 .preview{
   padding: 40px 15px;
   h6{
-    margin-top: 3px;
+    padding-top: 10px;
   }
 }
 .text_wrapper{
@@ -74,11 +74,12 @@ div.codeWrapper{
   font:600 1rem/1rem 'Lato', sans-serif;
 }
 .darkBtn{
-  margin: 30px 0;
+  margin: 40px 0 30px;
   padding: 10px 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: .5s;
+  font-weight: 600;
   &:hover{
     transition: .5s;
     background: rgba(60, 60, 60, 0.8);

@@ -1,0 +1,30 @@
+@import "global";
+
+.inputWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  & > div:nth-child(2){
+    cursor: pointer;
+  }
+}
+
+.textWrapper{
+  p{
+    font: 400 1rem/1.25rem Lato, sans-serif;
+    letter-spacing: 0.0625rem;
+    b{
+      text-transform: capitalize;
+    }
+  }
+}
+
+.tableWrapper{
+  display: flex;
+  align-items: center;
+  @media(max-width: 567.98px){
+    flex-direction: column;
+    justify-content: center;
+  }
+}

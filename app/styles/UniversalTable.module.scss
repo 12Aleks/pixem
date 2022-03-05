@@ -4,8 +4,11 @@
   tr{
     th, td{
       font: 400 1rem/1.125rem Lato, sans-serif;
-      padding: 10px 15px;
+      padding: 15px;
       cursor: pointer;
+      @media(max-width: 567.98px){
+        padding: 10px 15px;
+      }
     }
     th {
       text-align: center;

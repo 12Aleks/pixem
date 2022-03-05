@@ -16,7 +16,7 @@ const Contact = () => {
                 <Row>
                     <Col sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
                         <h1>Contact</h1>
-                        <p>If you have any questions or suggestions, you can contact me by:</p>
+                        <p className='text-center'>If you have any questions or suggestions, you can contact me by:</p>
                         <div className={styles.socialMedia}>
                             <Link href="skype:terma244">
                                 <div>

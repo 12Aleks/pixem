@@ -36,7 +36,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
     }, [px]);
 
     return (
-        <Col md={6} className={styles.preview}>
+        <Col sm={12} md={12} lg={6} xl={6} className={styles.preview}>
             <h2>Preview</h2>
             <h6>Enter your text here (max font-size - 72px)</h6>
             <InputGroup>
@@ -103,14 +103,14 @@ const Preview = ({px, unit, unitName, setPx}) => {
                             }
                         </Form.Select>
                     </Col>
-                <Col md={6} className='mt-3'>
+                <Col md={6} className='mt-3 mt-sm-4 mt-md-4'>
                     <Form.Label className={styles.label}>Font variant</Form.Label>
                     <Form.Select value={variant} onChange={e => setVariant(e.target.value)}>
                         <option value="normal">Normal</option>
                         <option value="small-caps">Small caps</option>
                     </Form.Select>
                 </Col>
-                    <Col md={6} className='mt-3'>
+                    <Col md={6} className='mt-3 mt-sm-4 mt-md-4'>
                         <Form.Label className={styles.label}>Font style</Form.Label>
                         <Form.Select value={style} onChange={e => setStyle(e.target.value)}>
                             <option value="normal">Normal</option>
@@ -118,7 +118,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
                             <option value="oblique">Oblique</option>
                         </Form.Select>
                     </Col>
-                    <Col md={6} className='mt-3'>
+                    <Col md={6} className='mt-3 mt-sm-4 mt-md-4'>
                         <Form.Label className={styles.label}>Font stretch</Form.Label>
                         <Form.Select value={stretch} onChange={e => setStretch(e.target.value)}>
                             <option value="normal">Normal</option>
@@ -133,7 +133,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
                         </Form.Select>
                     </Col>
 
-                <Col md={6} className='mt-3'>
+                <Col md={6} className='mt-3 mt-sm-4 mt-md-4'>
                     <Form.Label className={styles.label}>Color picker</Form.Label>
                     <Form.Control
                         type="color"
