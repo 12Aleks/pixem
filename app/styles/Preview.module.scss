@@ -73,6 +73,13 @@ div.codeWrapper{
 .label{
   font:600 1rem/1rem 'Lato', sans-serif;
 }
+.buttonWrapper{
+  display: flex;
+  justify-content: end;
+  @media (max-width: 567.98px) {
+    justify-content: center;
+  }
+}
 .darkBtn{
   margin: 40px 0 30px;
   padding: 10px 25px;
@@ -83,6 +90,10 @@ div.codeWrapper{
   &:hover{
     transition: .5s;
     background: rgba(60, 60, 60, 0.8);
+  }
+  @media (max-width: 567.98px) {
+    width: 100%;
+    margin: 40px 15px 30px;
   }
 }
 .formColor {

@@ -144,7 +144,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
                         onChange={e =>  setColor(e.target.value)}
                     />
                 </Col>
-                <Col md={12} className='d-flex justify-content-end'>
+                <Col md={12} className={styles.buttonWrapper}>
                     <Button variant="dark" onClick={() => [reset(), setPx(16)]} className={styles.darkBtn}>Reset preview</Button>
                 </Col>
                 </Row>
