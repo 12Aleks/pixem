@@ -1,5 +1,7 @@
 Pixem -  my small "pet project" that uses the React, Redux Toolkit, Next.js and React Bootstrap.
 
+Project URL: https://pixem.vercel.app
+
 About project:
 
 Pixem app is an online tool that helps you convert pixels into different relative and absolute measurement units.
