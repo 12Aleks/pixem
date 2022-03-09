@@ -15,8 +15,10 @@ const MainContainer = ({children, title, keywords}) => {
                 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
                 <link rel="manifest" href="/static/site.webmanifest" />
                 <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta keywords={'pixem converter' + keywords}></meta>
+                <meta name="description" content="Pixem app is an online tool that helps you convert pixels into different relative and absolute measurement units."/>
+                <meta keywords={`pixem converter ${keywords}`}/>
+                <meta name="robots" content="noindex,nofollow"/>
+                <meta name="google-site-verification" content="1N41cNbyiMA6g6uIMYhMIBq-G8M_-ewOO3WGfZYefGw" />
             </Head>
             <Header />
                {children}
