@@ -1,11 +1,11 @@
 @import "global";
 
-h1, h2, h3, h4, h5, h6, p, span, a{
+h1, h2, h3, h4, h5, h6, p, span, a, li{
   text-decoration: none;
   font-family: 'Lato', sans-serif;
   color: $dark;
 }
-h1, h2, h3, h4, h5, h6, label{
+h1, h2, h3, h4, h5, h6, label, li{
   letter-spacing: 1px;
 }
 h2{
@@ -24,11 +24,16 @@ h4{
 h6{
   font: 600 1rem/1.4rem 'Lato', sans-serif;
 }
-
+ol{
+  li{
+    padding: 10px 0;
+    font-weight: 500;
+  }
+}
 .dark{
   background: $dark;
 
-  h1, h2, h3, h4, h5, h6, p:not(p.text), span:not(span.input-group-text), a, .nav-link, label, table tr th, td, svg{
+  h1, h2, h3, h4, h5, h6, li, p:not(p.text), span:not(span.input-group-text), a, .nav-link, label, table tr th, td, svg{
     color: $white !important;
   }
   .navbar, .main .nav.nav-tabs, .main, button,  .table > :not(:first-child){
@@ -125,8 +130,19 @@ h6{
         padding:  0.5rem 1rem 0.5rem 0.5rem;
       }
     }
+
   }
 
+  .app_description{
+    padding-bottom: 50px;
+    h4{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    @media(max-width: 567.98px){
+      padding-bottom: 40px;
+    }
+  }
 
   .tab-content{
     .container{
@@ -135,12 +151,6 @@ h6{
           padding: 50px 15px;
           @media(max-width: 567.98px){
             padding: 30px 15px 0 ;
-          }
-        }
-        & > div{
-          min-height: calc(100vh - 165px);
-          @media(max-width: 991.98px){
-            min-height: auto;
           }
         }
       }
