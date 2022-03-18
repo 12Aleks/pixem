@@ -11,8 +11,7 @@ import styles from '../styles/Contact.module.scss';
 
 const Contact = () => {
     return (
-        <MainContainer
-        >
+        <MainContainer title={'Contact page'} keywords={'Contact page'}>
             <Container className='main contact'>
                 <Row>
                     <Col sm={{span: 12, offset: 0}} md={{span: 8, offset: 2}} lg={{span: 6, offset: 3}}>
