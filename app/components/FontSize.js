@@ -12,6 +12,16 @@ const FontSize = ({ px, setPx,  unit, setUnit, unitsInfo, active, setActive, tog
         setToggleSwitch(!toggleSwitch);
         active !== data && setActive(data)
     }
+
+    const changePx = (e) => {
+        e.stopPropagation();
+        setPx(e.target.value)
+    };
+
+    const changeUnit = (e) =>{
+        e.stopPropagation();
+        setUnit(e.target.value)
+    }
     
     return (
         <Col sm={12} md={12} lg={6} xl={6}>
@@ -27,7 +37,8 @@ const FontSize = ({ px, setPx,  unit, setUnit, unitsInfo, active, setActive, tog
                                 <FormControl
                                     type="text"
                                     value={px}
-                                    onChange={e => setPx(e.target.value)}
+                                    onChange={changePx}
+                                    className={styles.inputFont}
                                     />
                                 <InputGroup.Text>px</InputGroup.Text>
                             </InputGroup>
@@ -44,7 +55,8 @@ const FontSize = ({ px, setPx,  unit, setUnit, unitsInfo, active, setActive, tog
                                         className={`${styles.inputGroup} ${!active ? 'active': undefined}`}>
                                 <FormControl type="text"
                                              value={unit}
-                                             onChange={e => setUnit(e.target.value)}
+                                             onChange={changeUnit}
+                                             className={styles.inputFont}
                                               />
                                 <InputGroup.Text >{unitsInfo.unitData.code}</InputGroup.Text>
                             </InputGroup>

@@ -38,7 +38,7 @@ const Preview = ({px, unit, unitName, setPx}) => {
     return (
         <Col sm={12} md={12} lg={6} xl={6} className={styles.preview}>
             <h2>Preview</h2>
-            <h6>Enter your text here (max font-size - 72px)</h6>
+            <h6>Enter your text here (<span style={{}}>max font-size - 72px</span>)</h6>
             <InputGroup>
                 <FormControl
                     type="text"
