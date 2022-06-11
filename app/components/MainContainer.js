@@ -18,7 +18,8 @@ const MainContainer = ({children, title, keywords}) => {
                 <meta name="description"
                       content="Pixem app is an online tool that helps you convert pixels into different relative and absolute measurement units."/>
                 <meta keywords={`pixem converter ${keywords}`}/>
-                <meta name="robots" content="noindex,nofollow"/>
+                <meta name="robots" content="index,follow"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="google-site-verification" content="1N41cNbyiMA6g6uIMYhMIBq-G8M_-ewOO3WGfZYefGw"/>
             </Head>
             <Header/>
